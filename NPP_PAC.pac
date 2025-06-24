@@ -1,6 +1,7 @@
 function FindProxyForURL(url, host) {
     // 定義要走 VPN 的網站
-    if (dnsDomainIs(host, "outlook.com") ||
+    if (dnsDomainIs(host, "chatgpt.com") ||
+        dnsDomainIs(host, "outlook.com") ||
         dnsDomainIs(host, "erp.mycorp.com") ||
         shExpMatch(host, "*.office365.com")) {
         return "DIRECT";  // VPN 是系統預設路由時，DIRECT 表示走 VPN
